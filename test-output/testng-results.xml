@@ -1,25 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-13T02:20:13 AEST" name="Default suite" finished-at="2024-05-13T02:20:26 AEST" duration-ms="13634">
+  <suite started-at="2024-05-13T03:08:42 AEST" name="Suite" finished-at="2024-05-13T03:09:05 AEST" duration-ms="22472">
     <groups>
     </groups>
-    <test started-at="2024-05-13T02:20:13 AEST" name="Default test" finished-at="2024-05-13T02:20:26 AEST" duration-ms="13634">
+    <test started-at="2024-05-13T03:08:42 AEST" name="chrome Test" finished-at="2024-05-13T03:08:54 AEST" duration-ms="11850">
       <class name="TestCases.Test1">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCases.Test1@7fa98a66]" started-at="2024-05-13T02:20:13 AEST" name="beforeMethod" finished-at="2024-05-13T02:20:14 AEST" duration-ms="1339" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:TestCases.Test1@6e20b53a]" started-at="2024-05-13T03:08:42 AEST" name="beforeMethod" finished-at="2024-05-13T03:08:43 AEST" duration-ms="1182" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="Action()[pri:0, instance:TestCases.Test1@7fa98a66]" started-at="2024-05-13T02:20:14 AEST" name="Action" finished-at="2024-05-13T02:20:26 AEST" duration-ms="12145" status="PASS">
+        <test-method signature="Action()[pri:0, instance:TestCases.Test1@6e20b53a]" started-at="2024-05-13T03:08:43 AEST" name="Action" finished-at="2024-05-13T03:08:54 AEST" duration-ms="10567" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Action -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:TestCases.Test1@7fa98a66]" started-at="2024-05-13T02:20:26 AEST" name="afterMethod" finished-at="2024-05-13T02:20:26 AEST" duration-ms="136" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:TestCases.Test1@6e20b53a]" started-at="2024-05-13T03:08:54 AEST" name="afterMethod" finished-at="2024-05-13T03:08:54 AEST" duration-ms="89" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
       </class> <!-- TestCases.Test1 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- chrome Test -->
+    <test started-at="2024-05-13T03:08:42 AEST" name="firefox Test" finished-at="2024-05-13T03:09:05 AEST" duration-ms="22472">
+      <class name="TestCases.Test1">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:TestCases.Test1@38d8f54a]" started-at="2024-05-13T03:08:42 AEST" name="beforeMethod" finished-at="2024-05-13T03:08:44 AEST" duration-ms="1951" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="Action()[pri:0, instance:TestCases.Test1@38d8f54a]" started-at="2024-05-13T03:08:44 AEST" name="Action" finished-at="2024-05-13T03:09:04 AEST" duration-ms="20136" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected:<> but was:<Dashboard>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected:<> but was:<Dashboard>
+at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:115)
+at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:125)
+at TestCases.Test1.Action(Test1.java:69)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1623)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Action -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:TestCases.Test1@38d8f54a]" started-at="2024-05-13T03:09:04 AEST" name="afterMethod" finished-at="2024-05-13T03:09:05 AEST" duration-ms="371" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- TestCases.Test1 -->
+    </test> <!-- firefox Test -->
+  </suite> <!-- Suite -->
 </testng-results>

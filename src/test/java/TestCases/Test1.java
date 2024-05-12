@@ -1,8 +1,11 @@
 package TestCases;
 
 import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 
 import java.time.Duration;
 
@@ -17,12 +20,20 @@ import org.testng.annotations.AfterMethod;
 public class Test1 
 {
 	WebDriver driver;
+	
   @BeforeMethod
-  public void beforeMethod() 
+  @Parameters({"browser"})
+  public void beforeMethod(String br) 
   {
-	 driver  = new ChromeDriver();
-	//driver = new FirefoxDriver();
-	  //WebDriver driver = new SafariDriver();
+	  if(br.equals("chrome"))
+	  {
+	  driver  = new ChromeDriver();
+	  }
+	  else if(br.equals("firefox"))
+	  {
+	  driver = new FirefoxDriver();
+	  }
+		  //WebDriver driver = new SafariDriver();
       
 	  //Maximize browser and setting timeout value to get elements on page
 	  driver.manage().window().maximize();
@@ -55,8 +66,8 @@ public class Test1
 	  }
 	 
 	  SoftAssert sa = new SoftAssert();
-	  sa.assertEquals(act_Text,exp_Text);
-	  Assert.assertEquals(act_Text, exp_Text);
+	  AssertJUnit.assertEquals(act_Text,exp_Text);
+	  AssertJUnit.assertEquals(act_Text, exp_Text);
 	  
 	  //Checking text with expectation
 	  if(act_Text.equals(exp_Text))
